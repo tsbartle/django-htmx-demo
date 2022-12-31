@@ -8,7 +8,6 @@
   <title>{% if title %}{{title}}{% else %}django-htmx example app{%endif%}</title>
   <link rel="stylesheet" href="{% static 'mvp.css' %}">
   <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css">
-  <script async="true" src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
 
   <!-- An example of how we can configure htmx -->
   <!-- https://htmx.org/docs/#config -->
@@ -59,7 +58,8 @@
   <script defer="true" src="{% static 'htmx.js' %}"></script>
   <script defer="true" src="{% static 'ext/debug.js' %}"></script>
   <script defer="true" src="{% static 'ext/event-header.js' %}"></script>
-  <script defer="true" src="https://unpkg.com/htmx.org/dist/ext/preload.js"></script>
+  <script src="https://unpkg.com/htmx.org@1.8.4" integrity="sha384-wg5Y/JwF7VxGk4zLsJEcAojRtlVp1FKKdGy1qN+OMtdq72WRvX/EdRdqg/LOhYeV" crossorigin="anonymous"></script>
+
   {% django_htmx_script %}
   <script defer="true" src="{% static 'progressbar.js' %}"></script>
 </body>
